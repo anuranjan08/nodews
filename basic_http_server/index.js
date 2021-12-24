@@ -24,7 +24,7 @@ function requestHandler(req,res){
   fs.readFile(filepath,function(err,data){
         if(err){
             console.log(err);
-            return;
+            return res.end('Error');
         }
         return res.end(data);
     });
